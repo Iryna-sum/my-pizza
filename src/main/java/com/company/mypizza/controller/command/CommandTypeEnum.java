@@ -7,5 +7,6 @@ public enum CommandTypeEnum {
     PROFILE,
     PIZZA,
     PRODUCTS,
-    ADD_PIZZA_SAVE
+    ADD_PIZZA_SAVE,
+    INDEX
 }

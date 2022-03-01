@@ -13,4 +13,6 @@ public interface PizzaService {
     Pizza getPizza(int pizzaId) throws ServiceException;
 
     List<Pizza> getAllPizzas() throws ServiceException;
+
+    List<Pizza> getAllVisiblePizzas() throws ServiceException;
 }

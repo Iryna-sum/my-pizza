@@ -118,6 +118,7 @@ public class IngredientDAOImpl implements IngredientDAO {
                 Ingredient ingredient = new Ingredient();
                 ingredient.setId(resultSet.getInt("id"));
                 ingredient.setName(resultSet.getString("name"));
+                ingredients.add(ingredient);
             }
         } catch (SQLException | ConnectionPoolException e) {
             log.warn("The method was not completed.", e);

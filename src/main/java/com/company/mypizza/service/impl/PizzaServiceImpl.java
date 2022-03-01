@@ -49,4 +49,18 @@ public class PizzaServiceImpl implements PizzaService {
         }
         return pizzas;
     }
+
+    @Override
+    public List<Pizza> getAllVisiblePizzas() throws ServiceException {
+        DAOFactory factory = DAOFactory.getInstance();
+        PizzaDAO pizzaDAO = factory.getPizzaDAO();
+        List<Pizza> pizzas;
+        try {
+            pizzas = pizzaDAO.getAllVisiblePizzas();
+        }catch (DAOException e) {
+            throw new ServiceException("getAllVisiblePizzas(...) failed.", e);
+        }
+        return pizzas;
+    }
+
 }

@@ -8,4 +8,6 @@ public final class PageURL {
     public static final String REQUEST_PROFILE_PAGE = "/FrontController?commandType=profile";
     public static final String PRODUCT_PAGE = "/WEB-INF/jsp/admin/products.jsp";
     public static final String REQUEST_PRODUCT_PAGE = "/FrontController?commandType=products";
+    public static final String INDEX_PAGE = "index.jsp";
+
 }

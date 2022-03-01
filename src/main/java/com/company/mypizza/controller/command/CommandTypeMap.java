@@ -16,6 +16,7 @@ public class CommandTypeMap {
         stringCommands.put("profile", CommandTypeEnum.PROFILE);
         stringCommands.put("products", CommandTypeEnum.PRODUCTS);
         stringCommands.put("add_pizza_save", CommandTypeEnum.ADD_PIZZA_SAVE);
+        stringCommands.put("index", CommandTypeEnum.INDEX);
     }
 
     public static CommandTypeMap getInstance() {

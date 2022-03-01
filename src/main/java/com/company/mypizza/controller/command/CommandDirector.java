@@ -13,6 +13,7 @@ public class CommandDirector {
         commands.put(CommandTypeEnum.PROFILE, new ProfileCommand());
         commands.put(CommandTypeEnum.PRODUCTS, new ProductCommand());
         commands.put(CommandTypeEnum.ADD_PIZZA_SAVE, new AddPizzaSaveCommand());
+        commands.put(CommandTypeEnum.INDEX, new IndexCommand());
     }
 
     public Command getCommand(CommandTypeEnum type) {

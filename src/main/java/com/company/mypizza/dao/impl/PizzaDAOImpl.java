@@ -5,6 +5,7 @@ import com.company.mypizza.dao.connectionpool.ConnectionPool;
 import com.company.mypizza.entity.ExtendedPizza;
 
 import java.sql.*;
+import java.util.Formattable;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -147,6 +148,9 @@ public class PizzaDAOImpl implements PizzaDAO {
                 pizza.setImage(resultSet.getString("image"));
                 pizzas.add(pizza);
             }
+                for (Pizza pizza: pizzas){
+                    pizza.setIngredients(ingredientDAO.getPizzaIngredients(pizza));
+                }
         } catch (SQLException | ConnectionPoolException e) {
             log.warn("The method was not completed.", e);
             throw new DAOException("Method getAllPizzas(...) failed.", e);
